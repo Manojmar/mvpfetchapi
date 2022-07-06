@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.mvpapifetch.mode.Data"/>
+        <variable
+            name="dataa"
+            type="Data"/>
+    </data>
+
 <androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="17dp"
+    app:cardCornerRadius="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp">
@@ -19,15 +26,16 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="start"
-            android:src="@mipmap/ic_launcher"/>
+            profileImageUrl="@{dataa.image}"/>
         <TextView
             android:id="@+id/textv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PIZZA"
+            android:text="@{dataa.food}"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginStart="70dp"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+</layout>

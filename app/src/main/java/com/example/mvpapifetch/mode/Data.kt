@@ -1,4 +1,4 @@
-package com.example.mvpapifetch.Model
+package com.example.mvpapifetch.mode
 
 data class Data(
     val id: Int,

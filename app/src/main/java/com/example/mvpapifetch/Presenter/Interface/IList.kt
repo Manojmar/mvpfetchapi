@@ -1,7 +1,7 @@
 package com.example.mvpapifetch.Presenter.Interface
 
-import com.example.mvpapifetch.Model.Data
+import com.example.mvpapifetch.mode.Data
 
 interface IList {
-    fun image(body: List<Data>)
+    fun image(data: List<Data>)
 }

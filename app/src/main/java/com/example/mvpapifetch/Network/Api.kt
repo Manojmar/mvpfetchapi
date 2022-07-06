@@ -1,6 +1,6 @@
 package com.example.mvpapifetch.Network
 
-import com.example.mvpapifetch.Model.User
+import com.example.mvpapifetch.mode.User
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import retrofit2.Call

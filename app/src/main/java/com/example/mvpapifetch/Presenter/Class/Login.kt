@@ -1,12 +1,10 @@
 package com.example.mvpapifetch.Presenter.Class
 
 import android.util.Log
-import com.example.mvpapifetch.Model.User
+import com.example.mvpapifetch.mode.User
 import com.example.mvpapifetch.Network.Api
 import com.example.mvpapifetch.Presenter.Interface.ILogin
-import com.example.mvpapifetch.utils
 import com.google.gson.JsonObject
-import org.json.JSONException
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

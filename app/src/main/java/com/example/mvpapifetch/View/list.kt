@@ -4,11 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvpapifetch.Adapter.Adapter
-import com.example.mvpapifetch.Model.Data
+import com.example.mvpapifetch.mode.Data
 import com.example.mvpapifetch.Presenter.Class.List
 import com.example.mvpapifetch.Presenter.Interface.IList
 import com.example.mvpapifetch.databinding.ActivityListBinding
-import com.example.mvpapifetch.utils
 
 class list : AppCompatActivity(),IList {
     private lateinit var listBinding: ActivityListBinding
@@ -25,8 +24,8 @@ class list : AppCompatActivity(),IList {
 
     }
 
-    override fun image(body: kotlin.collections.List<Data>) {
-      adapter= Adapter(baseContext,body)
+    override fun image(data: kotlin.collections.List<Data>) {
+        adapter= Adapter(baseContext,data)
         listBinding.recycle.adapter=adapter
         listBinding.recycle.layoutManager=LinearLayoutManager(this)
     }

@@ -1,7 +1,7 @@
 package com.example.mvpapifetch.Presenter.Class
 
 import android.util.Log
-import com.example.mvpapifetch.Model.User
+import com.example.mvpapifetch.mode.User
 import com.example.mvpapifetch.Network.Api
 import com.example.mvpapifetch.Presenter.Interface.IList
 import com.example.mvpapifetch.utils
@@ -15,7 +15,8 @@ class List(private val ilist:IList ) {
         Api().imgcount().enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if(response.isSuccessful){
-                    ilist.image(response.body()!!.data)
+                utils.data = response.body()!!.data
+                    ilist.image(utils.data)
                 }
             }
 
